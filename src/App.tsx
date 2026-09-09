@@ -32,10 +32,10 @@ export default function App() {
   const currentAutoRotateSpeed = isPlaying ? (halfSpeed ? 0.5 : 1) : 0;
 
   return (
-    <div className="flex flex-col md:flex-row h-[100dvh] w-full bg-[#f4f4f2] text-neutral-800 font-sans overflow-hidden relative selection:bg-neutral-800 selection:text-white">
+    <div className="flex flex-col md:block min-h-screen md:h-screen w-full bg-[#f4f4f2] text-neutral-800 font-sans md:overflow-hidden relative selection:bg-neutral-800 selection:text-white">
       
       {/* 3D Canvas Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="fixed md:absolute inset-0 z-0">
          <SpecimenCanvas 
             traitColor={activeColor} 
             firmness={firmness} 
@@ -47,36 +47,39 @@ export default function App() {
       </div>
 
       {/* Top Header */}
-      <header className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10 pointer-events-none opacity-80">
+      <header className="relative md:absolute top-0 left-0 w-full p-5 md:p-6 flex justify-between items-center z-10 pointer-events-none opacity-80 shrink-0">
         <div className="text-[10px] sm:text-xs font-bold tracking-widest uppercase">
           Curriculum Vitae / Interativo
         </div>
       </header>
 
       {/* Left Content - Unified Flex Container */}
-      <div className="absolute top-24 bottom-6 md:bottom-10 left-6 md:left-16 right-6 md:right-auto md:w-[500px] z-10 pointer-events-none flex flex-col justify-between overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden pb-8 md:pb-4">
+      <div className="relative md:absolute px-5 md:px-0 pt-4 md:pt-0 pb-6 md:pb-4 md:top-24 md:bottom-10 md:left-16 w-full md:w-[500px] z-10 pointer-events-none flex flex-col md:justify-between md:overflow-y-auto md:overflow-x-hidden [&::-webkit-scrollbar]:hidden shrink-0">
         
         {/* Top Section */}
         <div className="drop-shadow-sm shrink-0">
-          <h1 className="font-serif text-[4.5rem] md:text-[7rem] leading-[0.85] tracking-tight text-neutral-900 mb-6 drop-shadow-md">
+          <h1 className="font-serif text-[3.8rem] md:text-[7rem] leading-[0.85] tracking-tight text-neutral-900 mb-4 md:mb-6 drop-shadow-md">
             Lucas<br/>
             <span className="italic text-neutral-800">Nunes.</span>
           </h1>
-          <p className="text-sm md:text-base text-neutral-700 max-w-sm leading-relaxed font-medium mix-blend-multiply drop-shadow-sm">
+          <p className="text-[13px] md:text-base text-neutral-700 max-w-sm leading-relaxed font-medium mix-blend-multiply drop-shadow-sm">
             Marketing, CX e Digital Content são as minhas áreas core. Combino uma visão criativa e analítica com valores como a adaptabilidade e a versatilidade.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3 pointer-events-auto">
-            <a href="mailto:lucasnunesatwork@gmail.com" className="flex items-center gap-2 bg-neutral-900 text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-neutral-700 transition-colors shadow-lg">
+          <div className="mt-5 md:mt-6 flex flex-wrap gap-2.5 md:gap-3 pointer-events-auto">
+            <a href="mailto:lucasnunesatwork@gmail.com" className="flex items-center gap-2 bg-neutral-900 text-white px-3 md:px-4 py-2 rounded-full text-[11px] md:text-xs font-bold hover:bg-neutral-700 transition-colors shadow-lg">
               <Mail size={14} className="shrink-0" /> <span className="truncate">lucasnunesatwork@gmail.com</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/50 backdrop-blur-md border border-neutral-300 text-neutral-900 px-4 py-2 rounded-full text-xs font-bold hover:bg-white transition-colors shadow-sm">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/50 backdrop-blur-md border border-neutral-300 text-neutral-900 px-3 md:px-4 py-2 rounded-full text-[11px] md:text-xs font-bold hover:bg-white transition-colors shadow-sm">
               <Linkedin size={14} className="shrink-0" /> LinkedIn
             </a>
           </div>
         </div>
 
+        {/* Mobile Spacer to reveal 3D Canvas */}
+        <div className="h-[45vh] md:hidden shrink-0 pointer-events-none" />
+
         {/* Bottom Section */}
-        <div className="flex flex-col gap-5 md:gap-8 drop-shadow-sm mt-8 shrink-0">
+        <div className="flex flex-col gap-5 md:gap-8 drop-shadow-sm mt-6 md:mt-8 shrink-0">
           <div className="flex items-center gap-3 text-neutral-700 bg-white/50 backdrop-blur-sm p-2 pr-4 rounded-full border border-white/60 shadow-sm w-fit pointer-events-auto cursor-help">
             <div className="bg-white p-2 rounded-full shadow-sm shrink-0">
               <Hand size={18} className="text-neutral-800" />
@@ -114,8 +117,8 @@ export default function App() {
       </div>
 
       {/* Right Control Panel */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-[420px] p-4 md:p-8 flex items-center justify-center pointer-events-none z-20">
-        <div className="bg-[#f9f9f9]/90 backdrop-blur-2xl w-full max-h-full overflow-y-auto rounded-3xl p-6 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.15)] border border-white pointer-events-auto flex flex-col">
+      <div className="relative md:absolute px-4 pb-8 pt-4 md:right-0 md:top-0 md:bottom-0 w-full md:w-[420px] md:p-8 flex items-center justify-center pointer-events-none z-20 shrink-0">
+        <div className="bg-[#f9f9f9]/90 backdrop-blur-2xl w-full max-h-none md:max-h-full md:overflow-y-auto rounded-3xl p-5 md:p-6 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.15)] border border-white pointer-events-auto flex flex-col">
           
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xs font-bold tracking-widest uppercase text-neutral-900">Lucas Nunes</h2>

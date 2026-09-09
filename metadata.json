@@ -1,0 +1,8 @@
+{
+  "name": "Remix Lucas Nunes - Interactive CV",
+  "description": "Um jogo de plataforma interativo que apresenta o meu percurso e currículo em Marketing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

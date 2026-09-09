@@ -51,10 +51,6 @@ export default function App() {
         <div className="text-[10px] sm:text-xs font-bold tracking-widest uppercase">
           Curriculum Vitae / Interativo
         </div>
-        <div className="flex items-center gap-2 text-[10px] sm:text-xs font-bold tracking-widest uppercase">
-          <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-          WebGL · Live
-        </div>
       </header>
 
       {/* Left Content - Unified Flex Container */}

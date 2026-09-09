@@ -58,18 +58,18 @@ export default function App() {
       </header>
 
       {/* Left Content - Unified Flex Container */}
-      <div className="absolute top-24 bottom-6 left-6 md:left-16 right-6 md:right-auto md:w-[500px] z-10 pointer-events-none flex flex-col justify-between overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden pb-4 md:pb-0">
+      <div className="absolute top-24 bottom-6 md:bottom-10 left-6 md:left-16 right-6 md:right-auto md:w-[500px] z-10 pointer-events-none flex flex-col justify-between overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden pb-8 md:pb-4">
         
         {/* Top Section */}
         <div className="drop-shadow-sm shrink-0">
-          <h1 className="font-serif text-6xl md:text-[8rem] leading-[0.85] tracking-tight text-neutral-900 mb-6 drop-shadow-md">
+          <h1 className="font-serif text-[4.5rem] md:text-[7rem] leading-[0.85] tracking-tight text-neutral-900 mb-6 drop-shadow-md">
             Lucas<br/>
             <span className="italic text-neutral-800">Nunes.</span>
           </h1>
-          <p className="text-base md:text-lg text-neutral-700 max-w-sm leading-relaxed font-medium mix-blend-multiply drop-shadow-sm">
+          <p className="text-sm md:text-base text-neutral-700 max-w-sm leading-relaxed font-medium mix-blend-multiply drop-shadow-sm">
             Marketing, CX e Digital Content são as minhas áreas core. Combino uma visão criativa e analítica com valores como a adaptabilidade e a versatilidade.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3 pointer-events-auto">
+          <div className="mt-6 flex flex-wrap gap-3 pointer-events-auto">
             <a href="mailto:lucasnunesatwork@gmail.com" className="flex items-center gap-2 bg-neutral-900 text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-neutral-700 transition-colors shadow-lg">
               <Mail size={14} className="shrink-0" /> <span className="truncate">lucasnunesatwork@gmail.com</span>
             </a>
@@ -80,38 +80,38 @@ export default function App() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col gap-6 md:gap-10 drop-shadow-sm mt-12 shrink-0">
+        <div className="flex flex-col gap-5 md:gap-8 drop-shadow-sm mt-8 shrink-0">
           <div className="flex items-center gap-3 text-neutral-700 bg-white/50 backdrop-blur-sm p-2 pr-4 rounded-full border border-white/60 shadow-sm w-fit pointer-events-auto cursor-help">
             <div className="bg-white p-2 rounded-full shadow-sm shrink-0">
               <Hand size={18} className="text-neutral-800" />
             </div>
-            <p className="text-xs font-medium leading-tight mix-blend-multiply">
+            <p className="text-[11px] font-medium leading-tight mix-blend-multiply">
               Toque. Arraste. Solte.<br/>
               Sinta a textura. Observe a inércia.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-6 md:gap-10 pb-2 mix-blend-multiply">
+          <div className="flex flex-wrap gap-5 md:gap-8 pb-4 mix-blend-multiply">
             <div>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl md:text-3xl font-semibold font-serif text-neutral-900">3</span>
-                <span className="text-xs font-sans font-medium text-neutral-600">GRAUS</span>
+                <span className="text-xl md:text-2xl font-semibold font-serif text-neutral-900">3</span>
+                <span className="text-[10px] font-sans font-medium text-neutral-600">GRAUS</span>
               </div>
-              <div className="text-[10px] font-bold tracking-widest uppercase text-neutral-500 mt-1">Formação Académica</div>
+              <div className="text-[9px] font-bold tracking-widest uppercase text-neutral-500 mt-1">Formação Académica</div>
             </div>
             <div>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl md:text-3xl font-semibold font-serif text-neutral-900">4</span>
-                <span className="text-xs font-sans font-medium text-neutral-600">PROJETOS</span>
+                <span className="text-xl md:text-2xl font-semibold font-serif text-neutral-900">4</span>
+                <span className="text-[10px] font-sans font-medium text-neutral-600">PROJETOS</span>
               </div>
-              <div className="text-[10px] font-bold tracking-widest uppercase text-neutral-500 mt-1">De Experiência</div>
+              <div className="text-[9px] font-bold tracking-widest uppercase text-neutral-500 mt-1">De Experiência</div>
             </div>
             <div>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl md:text-3xl font-semibold font-serif text-neutral-900">+1.3k</span>
-                <span className="text-xs font-sans font-medium text-neutral-600">HRS</span>
+                <span className="text-xl md:text-2xl font-semibold font-serif text-neutral-900">+1.3k</span>
+                <span className="text-[10px] font-sans font-medium text-neutral-600">HRS</span>
               </div>
-              <div className="text-[10px] font-bold tracking-widest uppercase text-neutral-500 mt-1">Prática de Estágio</div>
+              <div className="text-[9px] font-bold tracking-widest uppercase text-neutral-500 mt-1">Prática de Estágio</div>
             </div>
           </div>
         </div>
